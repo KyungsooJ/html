@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>ex01.html</h1>
+    <hr>
+
+    <h3>개발자 도구 colsole창에서 확인하세요</h3>
+
+    <script>
+        const arr = [
+            { name : '아메리카노',      category: '커피',    price: 2000 },
+            { name : '밀크카라멜라떼',  category: '커피',    price: 4000 },
+            { name : '카페라떼',        category: '커피',    price: 2500 },
+            { name : '레몬에이드',      category: '에이드',  price: 3000 },
+            { name : '생과일주스',      category: '주스',    price: 3500 },
+        ]
+
+        // arr에서 다른 요소 빼고 이름으로만 구성한 새로운 배열 t1
+        const t1 = arr.map(e => e.name)
+        console.log(t1)
+
+        // arr에서 가격이 3천원 이상인 상품만 모은 새로운 배열 t2
+        const t2 = arr.filter(e => e.price >= 3000)
+        console.log(t2)
+
+        // arr의 각 상품을 가격순으로 정렬
+        arr.sort((a, b) => a.price - b.price)
+        console.log(arr)
+
+        // arr에서 카테고리가 커피인 상품만 가져와서 이름만 남긴 배열 t3
+        const t3 = arr.filter( e => e.category == '커피').map(e => e.name)
+        console.log(t3)
+
+        // 이름 순 정렬
+        arr.sort((a, b) => a.name > b.name ? 1: -1)
+        console.log(arr) 
+
+        // 추가
+        arr.push({name: '코카콜라', category: '음료', price: 1800,})
+        console.log(arr)
+
+        //마지막 값 꺼내기
+        const last = arr.pop()
+
+        //처음 값 꺼내기
+        const first = arr.shift()
+
+        console.log(first, last)
+        console.log(arr)
+
+        
+    </script>
+    
+</body>
+</html>

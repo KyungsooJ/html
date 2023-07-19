@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02.html</title>
+    <style>
+        #calc { /* id="calc" */
+            border: 2px solid gray;
+            box-shadow: 10px 10px 10px black; /*오른쪽, 아래, 그라데이션의 크기*/
+            width: 400px;
+            margin: 20px;
+        }
+        /*
+        .floor {
+            border: 2px dashed orange;
+        }
+        */
+        .work {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 8px;
+            height: 30px;
+            font-size: 14px;
+            margin: auto;
+        }
+        button { 
+            all: unset;
+            cursor: pointer;
+        }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px; /* margin과 차이 확인 */
+        }
+        input { 
+            all: unset;
+            padding: 5px;
+            font-size: 40px;
+            text-align: right; /*글자 정렬*/
+            width: 100%;    /* 지정한 너비에서 패딩과 보더를 포함하게 한다 */
+            box-sizing: border-box;
+            border: 2px solid black; 
+            /* 
+                기본 요소의 자리차지는 [지정한크기] (400) + padding (20) + border (2) 이지만 = (444 이지만)
+                box-sizing을 border-box로 설정하면
+                [지정한크기] (400) = 요소 크기(356) - padding(20) - border(2) 로 계산해준다
+            */
+        }
+
+        .subBtns {
+            display: flex;
+            /*justify-content: space-around;*/
+            text-align: center;
+        }
+
+        .subBtn {
+            flex:1;
+            height: 40px;
+            line-height: 40px;
+        }
+        
+        .mainBtns {
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .mainBtn {
+            background-color: #eee;
+            width: 97px;
+            height: 60px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1px;
+            user-select: none;
+        }
+
+        .mainBtn:active {
+            background-color: #ddd;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <h1>windows 계산기 화면 구현</h1>
+    <hr>
+
+    <div id="calc">
+        <div class="work">
+            <div class="left">📱 계산기</div>
+            <div class="right">
+                <button>➖</button>
+                <button>⬜</button>
+                <button>❌</button>
+            </div>
+        </div>
+        <div class="floor top">
+            <div class="left">
+                ≡ 표준 
+            </div>
+            <div class="right">
+                🕒
+            </div>
+        </div>
+
+        <div class="floor number">
+            <input type="text" value="0">
+        </div>
+
+        <div class="floor subBtns">
+            <div class="subBtn">MC</div>
+            <div class="subBtn">MR</div>
+            <div class="subBtn">M+</div>
+            <div class="subBtn">M-</div>
+            <div class="subBtn">MS</div>
+            <div class="subBtn">M∨</div>
+            <!-- ㄷ 한자 TAB-->
+
+        </div>
+        <div class="floor mainBtns">
+            <div class="mainBtn">%</div>
+            <div class="mainBtn">CE</div>
+            <div class="mainBtn">C</div>
+            <div class="mainBtn">←</div>
+            <div class="mainBtn">½</div>
+            <div class="mainBtn">x<sup>2</sup></div>
+            <div class="mainBtn">√</div>
+            <div class="mainBtn">÷</div>
+            <div class="mainBtn">7</div>
+            <div class="mainBtn">8</div>
+            <div class="mainBtn">9</div>
+            <div class="mainBtn">×</div>
+            <div class="mainBtn">4</div>
+            <div class="mainBtn">5</div>
+            <div class="mainBtn">6</div>
+            <div class="mainBtn">-</div>
+            <div class="mainBtn">1</div>
+            <div class="mainBtn">2</div>
+            <div class="mainBtn">3</div>
+            <div class="mainBtn">+</div>
+            <div class="mainBtn">±</div>
+            <div class="mainBtn">0</div>
+            <div class="mainBtn">.</div>
+            <div class="mainBtn">=</div>
+        </div>
+    </div>
+    
+</body>
+</html>

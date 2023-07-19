@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2.html</title>
+    <style>
+        ul {
+            display: flex;
+            border-top: 3px solid #00b2cf;
+            display: flex;
+            flex-direction: row;
+            background-color: #061c25;
+            color: white;
+            justify-content: space-around;
+            
+        }
+
+        li {
+            width: 145px;
+            height: 40px;
+            text-align: center;
+            position: relative;
+            border-right: 0px;
+
+
+            
+            box-sizing: border-box;
+
+        }
+    
+        ul > li {        
+            position: relative;
+            flex: 1;
+            text-align: center;
+            border: 1px solid #333;
+            border-right: 0px;
+
+
+        
+        }
+        
+
+        ol {
+            display: none;
+            list-style: none;
+            padding-left: 0;
+            
+            position: absolute;
+            top: 31px;
+
+        }
+        ul> li:hover > ol {
+            display: block;
+        }
+        ol > li {
+            background-color: #123643;
+            color: white;
+            list-style: none;
+            padding-left: 0px;
+            font-size: 13px;
+            width: 180px;
+            text-align: left;
+            padding: 5px 10px;
+            margin-top: 1px;
+        }
+        li:active {
+            background-color: aqua;
+
+        }
+        li:hover {
+            cursor: pointer;
+            color: #00b2cf;
+
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><span>홈</span></li>
+        <li>
+            <span>기록실</span>
+            <ol>
+                <li>LoL 기록실 - 경기기록</li>
+                <li>LoL 기록실 - 선수기록</li>
+                <li>LoL 기록실 - 팀통산</li>
+                <li>LoL 기록실 - 선수 통산</li>
+                <li>LoL 기록실 - 챔피언 픽/밴</li>
+                <li>LoL 기록실 - 래더 랭킹</li>
+                <li>LoL 프로필 정보</li>
+            </ol>
+        
+        </li>
+        <li><span>LCK 인벤</span></li>
+        <li><span>챔피언</span></li>
+        <li><span>카운터픽</span></li>
+        <li><span>공략</span></li>
+        <li><span>스킨갤러리</span></li>
+        <li><span>방송/영상</span></li>
+        <li><span>LOL DB</span></li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img {
+            opacity: 1;
+            transition-duration: 0.5s;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            /* 전체화면에서 가운데에 놔두고 싶을 때 top left transform 같이 사용*/
+
+        }
+        /* 선택자를 상세하게 작성할 수록 우선순위가 높아진다*/
+        /* .hidden을 하면 우선순위가 낮아서 먹히지 않는다*/
+        #img.hidden {
+            opacity: 0; /* 투명도*/
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ex08.html</h1>
+    <hr>
+
+    <h3>버튼에 마우스를 올리면 그림이 나타나는 예제</h3>
+
+    <p align="center">
+        <button id="btn">버튼</button>
+    </p>
+
+    <img class="hidden" id="img" src="img/danbi.jpg">
+    
+    <!-- style에 hover를 주면 간단하게 작용하긴 함 -->
+    <script>
+        const btn = document.getElementById('btn')
+        const img = document.getElementById('img')
+
+        btn.onmouseover = (event) => { img.classList.remove('hidden') }
+        btn.onmouseout = (event) => { img.classList.add('hidden') }
+        // btn.onmouseover = () =>  img.classList.remove('hidden') 
+        // btn.onmouseout = () =>  img.classList.add('hidden') 
+        // btn.onmouseover = event => { img.classList.remove('hidden') }
+        // btn.onmouseout = event => { img.classList.add('hidden') }
+        
+    </script>
+</body>
+</html>

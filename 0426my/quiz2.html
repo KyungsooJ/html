@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2.html</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .frame {
+            width: 940px;
+            margin: 0 auto;
+        }
+        .wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        header > .wrap ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+            justify-content: flex-start;
+            cursor: pointer;
+        }
+
+        .wrap ul li {
+            margin: 5px;
+            font-weight: bold;
+            font-size: 12px;
+            color: grey;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: flex-start;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        nav ul li {
+
+            height: 60px;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        nav ul li .title {
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+            cursor: pointer;
+            
+        }
+        nav > ul > li > .tooltip {
+            color: grey;
+            font-size: 13px;
+            visibility: hidden;
+        }
+        nav > ul > li:hover {
+            background-color: #ba000c;
+        }
+        nav > ul > li:hover > div {
+            color: white;
+            visibility: visible;
+        }
+
+        div.banner > img {
+            width: 100%
+        }
+
+        .dropdown{      
+            width: 100%;
+            height: 0;
+            position: absolute;
+            top: 130px;
+            left: 0;
+            transition-duration: 0.5s;
+            overflow: hidden;
+        }
+        div.dropdown:hover, 
+        nav:hover + div.dropdown {
+            height: 300px;
+            background-color: #6f6f6f;
+        }
+        .flex {
+            display: flex;
+        }
+        .dropdown ul {
+            flex: 1;
+            list-style: none;
+            text-align: center;
+            padding-left: 0;
+            color: silver;
+            font-size: 14px;
+            transition-duration: 0.5s;
+        }
+        
+    </style>
+</head>
+<body>
+        <header class="frame">
+            <div class="wrap">
+                <div class="left">
+                    <ul>
+                        <li>창업설명회</li>
+                        <li>기업특판</li>
+                    </ul>
+                </div>
+                <div class="center">
+                    <img src="img/할리스로고.JPG">
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>멤버십 로그인</li>
+                        <li>멤버십 가입</li>
+                        <li>멤버십 고객센터</li>
+                        <li>English</li>
+                        <li>中文</li>
+                    </ul>                    
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li>
+                        <div class="title">Menu</div>
+                        <div class="tooltip">메뉴</div>
+                    </li>
+                    <li>
+                        <div class="title">Hollys Mall</div>
+                        <div class="tooltip">할리스 몰</div>
+                    </li>
+                    <li>
+                        <div class="title">Membership</div>
+                        <div class="tooltip">멤버십</div>
+                    </li>
+                    <li>
+                        <div class="title">HOLLYS NEWS</div>
+                        <div class="tooltip">이벤트 및 공지</div>
+                    </li>
+                    <li>
+                        <div class="title">Store</div>
+                        <div class="tooltip">매장</div>
+                    </li>
+                    <li>
+                        <div class="title">HOLLYS is</div>
+                        <div class="tooltip">할리스 소개</div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="dropdown">
+                <div class="frame">
+                    <div class="flex">
+                        <ul>
+                            <li>COFFEE</li>
+                            <li>라떼 · 초콜릿 · 티</li>
+                            <li>할라치노 · 빙수</li>
+                            <li>스무디 · 주스</li>
+                            <li>스파클링</li>
+                            <li>푸드</li>
+                            <li>MD상품</li>
+                            <li>MD식품</li>
+                        </ul>
+        
+                        <ul>
+                            <li>할리스콘</li>
+                            <li>할리스카드</li>
+                            <li>E-Store</li>
+                            <li>구매내역</li>
+                        </ul>
+        
+                        <ul>
+                            <li>스마트오더</li>
+                            <li>멤버십 혜택</li>
+                        </ul>
+                        <ul>
+                            <li>Notice</li>
+                            <li>Event</li>
+                        </ul>
+                        <ul>
+                            <li>매장검색</li>
+                        </ul>
+                        <ul>
+                            <li>HOLLYS</li>
+                            <li>할리스 위치 및 연락처</li>
+                            <li>채용 안내</li>
+                            <li>가맹문의 및 절차</li>
+                            <li>B2B 사업 소개</li>
+                        </ul>
+                    </div>
+                </div>          
+            </div>
+        </header>
+
+        <div class="banner">
+            <img src="img/banner.jpg">
+        </div>
+        <main class="frame">
+            여기서부터 내용은 다시 가운데
+        </main>
+</body>
+</html>

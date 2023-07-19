@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03.html</title>
+    <style>
+        .item {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 2px dashed blue;
+            position: relative;
+            text-align: center;
+
+            overflow: hidden; /*다른요소에 침범하지 않는다 */
+
+        }
+        .item > h3 {
+            position: absolute;
+            bottom: 10px; /*top하면 글자가 위로 올라간다 */
+            right: 10px;
+            margin: 0;
+        }
+        .item > img { 
+            width: 150px;
+
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }    
+        .item:hover > img { /* 아이템에 마우스를 올렸을 때 이미지*/
+            transform: scale(120%);
+        }
+
+        
+        .wrap {
+            display: flex;
+            flex-flow: wrap;
+            width: 700px;
+            border: 2px dashed red;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h1>여러 항목 중 마우스 올린 요소에만 scale</h1>
+    <hr>
+
+    <div class="wrap">
+        <div class="item">
+            <img src="img/짱구.jpg" alt="대체 텍스트. 그림이 안뜨면 내용을 식별하기 위한 글자">
+            <h3>짱구</h3>
+        </div>
+
+        <div class="item">
+            <img src="img/짱아.jpg" alt="대체 텍스트. 그림이 안뜨면 내용을 식별하기 위한 글자">
+            <h3>짱아</h3>
+        </div>
+
+        <div class="item">
+            <img src="img/맹구.jpg" alt="대체 텍스트. 그림이 안뜨면 내용을 식별하기 위한 글자">
+            <h3>맹구</h3>
+        </div>
+
+        <div class="item">
+            <img src="img/훈이.jpg" alt="대체 텍스트. 그림이 안뜨면 내용을 식별하기 위한 글자">
+            <h3>훈이</h3>
+        </div>
+
+        <div class="item">
+            <img src="img/흰둥이.jpg" alt="대체 텍스트. 그림이 안뜨면 내용을 식별하기 위한 글자">
+            <h3>흰둥이</h3>
+        </div>
+
+        <div class="item">
+            <img src="img/수지.jpg" alt="대체 텍스트. 그림이 안뜨면 내용을 식별하기 위한 글자">
+            <h3>수지</h3>
+        </div>
+
+    </div>
+    
+</body>
+</html>

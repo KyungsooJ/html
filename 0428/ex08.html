@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interval</title>
+</head>
+<body>
+    
+    <h3 id="result">타이머</h3>
+
+    <script>
+        let second = 10
+
+        const toTimeString = function(second) {
+            let n1 = Math.floor(second / 60)        // 소수점 자리 버리고 정수로 만들기
+            let n2 = second % 60
+            n1 = n1 < 10 ? '0' + n1 : n1
+            n2 = n2 < 10 ? '0' + n2 : n2
+            const text = `${n1}:${n2}`
+            return text
+        }
+
+        const handler = function() {
+            second -= 1
+            if(second == -1) {
+                clearInterval(interval)
+                alert('타이머 종료 ¯\_(ツ)_/¯')
+                return
+            }
+
+            const result = document.getElementById('result')
+            result.innerText = toTimeString(second)
+        }
+        //handler()   // 내가 직접 호출하는 handler
+
+        const interval = setInterval(handler, 1000)      // 1000 ms == 1s
+
+    </script>
+</body>
+</html>

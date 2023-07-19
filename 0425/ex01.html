@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01.html</title>
+</head>
+<body>
+    <h1>semantic tag (의미를 부여한 태그)</h1>
+    <hr>
+    <h3>기본적으로 div와 동일하나 문서 구조를 나타내기 위해 별도로 작성하는 태그</h3>
+
+    <ul>
+        <li>header : 문서의 상단을 나타낸다</li>
+        <li>nav : 메뉴 네비게이터</li>
+        <li>aside : 사이드 메뉴</li>
+        <li>main : 페이지 주 내용</li>
+        <li>section : 일정 영역</li>
+        <li>article : 단락</li>
+        <li>footer : 페이지 하단 고정 내용</li>
+    </ul>
+
+    <blockquote style="background-color: burlywood;">
+        &lt;div class="header">&lt;/div><br>
+        &lt;header>&lt;/header>
+        <!--       &lt; : less than, 작다는 의미하는 부등호 기호-->
+        공백기호&nbsp;1234 <!-- nbsp;는 공백기호 -->
+    </blockquote>
+
+    <h3>웹 기본 레이아웃</h3>
+
+    <style>
+        header  { border: 3px dashed red;        }
+        nav     { border: 3px dashed orange;     }
+        main    { border: 3px dashed lime;       }
+        section { border: 3px dashed blue;       }
+        article { border: 3px dashed skyblue;    }
+        footer  { border: 3px dashed purple;     }
+        div     { border: 3px dashed black;}
+
+        main {
+            display: flex;
+        }
+        section {
+            flex: 1;
+        }
+    </style>
+
+    <header>
+        <h3 class="logo">logo</h3>
+        <nav>
+            <div>
+                <ul>
+                    <li>메뉴1</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                </ul>
+                
+            </div>
+            
+        </nav>
+    </header>
+
+    <main>
+        <section class="left">
+            <article>1</article>
+            <article>2</article>
+            <article>3</article>
+        </section>
+        <section class="right">
+            <article>4</article>
+            <article>5</article>
+            <article>6</article>
+        </section>
+    </main>
+
+    <footer>
+        <article>copyright..</article>
+    </footer>
+    
+</body>
+</html>

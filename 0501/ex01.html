@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01.html</title>
+    <style>
+        #root {
+            display: flex;
+            width: 500px;
+        }
+
+        #root > div {
+            flex: 1;
+            text-align: center;
+            font-size: 40px;
+            border: 2px solid black;
+            transition-duration: 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>배열 순번 바꾸기</h1>
+    <hr>
+
+    <div id="root"></div>
+
+    <script>
+        const arr = [4, 8, 2, 7, 6]
+        console.log(arr)
+
+        const n1 = arr.pop()
+        console.log(arr)
+        console.log(n1)
+        console.log('')
+
+        const n2 = arr.shift()
+        console.log(arr)
+        console.log(n2)
+        console.log('')
+
+        arr.push(n1)
+        console.log(arr)
+
+        arr.push(n2)
+        console.log(arr)
+
+        // 배열을 준비하고, 일정한 시간(interval)마다 맨 앞의 값을 맨뒤로 보내려면
+        const arr2 = ['A', 'B', 'C', 'D', 'E']
+        const root = document.getElementById('root')
+
+        function handler() {
+            // 데이터 만드는 것
+            // const value = arr2.shift()
+            // arr2.push(value)
+            arr2.push(arr2.shift())
+
+            // 1) 콘솔창에 출력
+            // console.log(arr2)
+
+            // 2) HTML 내부에 글자로 출력하기
+            // root.innerText = arr2
+
+            // 3) HTML 내부에 element를 작성하여 추가하기
+            root.innerHTML = ''
+            arr2.forEach(element => {
+                const div = document.createElement('div')
+                div.innerText = element
+                root.appendChild(div)
+            })
+        }
+
+        setInterval(handler, 1000)
+
+    </script>
+    
+</body>
+</html>

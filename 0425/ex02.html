@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02.html</title>
+    <style>
+        .wrap {
+            border: 3px solid silver;
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .red {
+            top: 0;
+            left: 0;
+            background-color: red;
+            z-index: 1;
+            /* 기존에는 blue가 마지막에 적어서 위로 올라온다. z인덱스 사용하면 바꿀수 있다 디폴트 값은 0*/
+        }
+        .blue {
+            bottom: 0;
+            right: 0;
+            background-color: blue;
+            /*z-index: 0;*/
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ex02.html : z-index</h1>
+    <hr>
+    <h3>x축 y축으로 위치를 지정했을 때, 요소가 겹친다면 어떤 요소를 앞에 둘지 결정한다</h3>
+    <h3>position이 겹쳐졌을 때, 우선순위를 지정해준다</h3>
+    <h3>position을 사용하면 거의 100% 사용</h3>
+
+    <div class="wrap">
+        <div class="item red"></div>
+        <div class="item blue"></div>
+    </div>
+    
+</body>
+</html>

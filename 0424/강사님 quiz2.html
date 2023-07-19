@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown-inven.html</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin: auto;
+            width: 1020px;
+            padding-left: 0;
+            background-color: black;
+        }
+        ul > li {
+            border-top: 3px solid #00b2cf;
+            flex: 1;
+            text-align: center;
+            background-color: #061c25;
+            margin-right: 1px; /* 구분 선이 그이전다*/
+            height: 40px;
+            line-height: 34px;
+            box-sizing: border-box;
+            border-bottom: 2px solid 061c25;
+            position: relative;
+        }
+        ul > li:hover {
+            border-bottom: 2px solid #00b2cf; /* 마우스를 갖다대면 */
+        }
+        ul > li:hover > a {
+            color: #00b2cf;
+        }
+        ul > li > a {   /*display: inline, 내부 컨텐트 크기만큼 영역크기를 부여받는다*/
+            display: block;
+            color: white;
+            font-size: 13.5px;
+            font-weight: bold; 
+        }
+        ul > li > ol { /* 드랍다운 부분 */
+            display: none;
+            list-style: none;
+            padding: 1px;
+            font-size: 12px;
+            text-align: left;
+            background-color: #2b9cb9;
+            color: white;
+            position: absolute;
+            top: 37px;
+            left: 0;
+
+        }
+        ul > li:hover > ol {
+            display: block;
+        }
+        ol> li {
+            width: 150px;
+            background-color: #123643; /* 드랍다운 테두리 선 */
+            padding-left: 10px;
+            line-height: 27px; /* 한줄의 높이 */
+
+        }
+        ol > li > a {
+            display: block;
+        }
+        ol > li > a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>lol.inven.co.kr 드랍다운 메뉴 구현</h1>
+    <hr>
+
+    <!-- <input type="color"> -->
+
+    <ul>
+        <li><a href="">홈</a></li>
+        <li><a href="">기록실</a>
+        <ol>
+            <li><a href="">LoL 기록실 - 경기기록</a></li>
+            <li><a href="">LoL 기록실 - 선수기록</a></li>
+            <li><a href="">LoL 기록실 - 팀통산</a></li>
+            <li><a href="">LoL 기록실 - 선수 통산</a></li>
+            <li><a href="">LoL 기록실 - 챔피언 픽/밴</a></li>
+            <li><a href="">LoL 기록실 - 래더 랭킹</a></li>
+            <li><a href="">LoL 프로필 정보</a></li>
+        </ol>
+    </li>
+        <li><a href="">LCK 인벤</a></li>
+        <li>
+            <a href="">챔피언</a>
+            <ol>
+                <li><a href="">LoL 챔피언 정보</a></li>
+                <li><a href="">챔피언 능력치 랭킹</a></li>
+                <li><a href="">실시간 챔피언 평가</a></li>
+            </ol>
+        
+        </li>
+        <li><a href="">카운터픽</a></li>
+        <li><a href="">공략</a></li>
+        <li><a href="">스킨갤러리</a></li>
+        <li><a href="">방송/영상</a></li>
+        <li><a href="">LoL DB</a>
+            <ol>
+                <li><a href="">시즌13 룬 시뮬</a></li>
+                <li><a href="">시즌 13 아이템 DB</a></li>
+                <li><a href="">소환사 주문 DB</a></li>
+            </ol>
+        
+        </li>
+
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01.html</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="top">
+        a tag
+    </h1>    
+    <a href="#bottom"><button>문서 맨 아래로</button></a>
+    
+    <hr>
+    <h3>anchor : 대상을 지정하여, 대상의 위치로 이동한다</h3>
+
+    <h3>HyperText Transfer Protocol</h3>
+    <h3>HyperText : 문서와 문서간의 링크로 연결된 형식의 텍스트</h3>
+    
+    <p>
+        <a href="https://www.naver.com">네이버</a>
+        a : anchor<br>
+        href : HTTP REFerence<br>
+    </p>
+
+    <p>
+        <a href="https://search.naver.com/search.naver?query=뽀로로&where=image">
+        <img src="13.jpg">
+        </a>
+    </p>
+
+    <ul>
+        <li>a 태그 안에는 글자, 버튼, 그림 등을 배치할 수 있다</li>
+        <li>a 태그의 대상은 사이트 주소, 현재 문서 내 id, 파일 등이 될 수 있다</li>
+        <li>링크가 파일을 가리키면, 브라우저에서 열린다</li>
+        <li>만약, 파일의 형식이 브라우저에서 처리할 수 없는 형식이면 다운로드한다</li>
+    </ul>
+    <!-- target="_blank" 은 새탭에서 열어 주고 싶을 때-->
+    <p>
+        <a href="오라클 제약조건(0412).txt" target="_blank">텍스트 파일</a>
+    </p>
+
+    <p>
+        <a href="13.jpg" target="_blank">이미지 파일</a>
+    </p>
+
+    <p>
+        <a href="웃긴영상.mp4" target="_blank">동영상 파일</a>
+    </p>
+
+    <p>
+        <a href="notepad.exe">윈도우 실행 파일</a>
+    </p>
+
+    <p>
+        <a href="day01_my.zip">압축 파일</a>
+    </p>
+
+    <p>
+        <a href="../0418/quiz1.html">상대경로를 이용한 다른 HTML 문서</a>
+
+    </p>
+    
+    <hr>
+
+    <h3>a 태그는 inline 이므로, 내부에서 block 요소를 포함시키지 않도록 한다</h3>
+
+    <a href="https://www.daum.net">
+        <div>
+            <img src="전등.gif">
+        </div>
+    </a>
+
+    
+
+    <p id="bottom">
+        <a href="#top"><button>문서 상단으로</button></a>
+    </p>
+    
+</body>
+</html>

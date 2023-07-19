@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1.html</title>
+    <style>
+        ul {
+            
+            
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            
+           
+            padding-left: 0px;
+            
+            
+        }
+        li {
+            text-align: center;
+            font-weight: bold;
+            padding: 5px;
+            margin: 2px;
+            transition-duration: 0.5s; /* 속성값이 수치로 연산될 수 있는 경우 적용 가능*/
+            cursor: pointer;
+            /* display: block;*/
+            /* 수치 변화가 아니므로, 부드러운 변경이 적용되지 않음 */
+            opacity: 1;
+        }
+        #best {
+            color: blueviolet;
+        }
+        #new {
+            color: palevioletred;
+        }
+        #best:hover {
+            color: white;
+            background-color: pink;
+            transition-duration: 0.5s;
+        }
+        #new:hover {
+            color: white;
+            background-color: pink;
+            transition-duration: 0.5s;
+        }
+        li:hover {
+            color: white !important;
+            background-color: pink;
+            transition-duration: 0.5s;
+
+            /* display: none; */
+            opacity: 0.2;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="best">베스트</li>
+        <li id="new">신상</li>
+        <li>아우터</li>
+        <li>상의</li>
+        <li>셔츠/블라우스</li>
+        <li>트레이닝</li>
+        <li>베이직</li>
+        <li>윈피스</li>
+        <li>스커트</li>
+        <li>팬츠</li>
+        <li>가방</li>
+        <li>신발</li>
+        <li>액세서리</li>
+    </ul>
+</body>
+</html>

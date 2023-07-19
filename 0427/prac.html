@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            border: 2px solid red;
+            width: 800px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .left {
+            border: 2px solid aqua;
+            width: 400px;
+            
+        }
+        .right {
+            border: 2px solid blueviolet;
+            width: 400px;
+        }
+        
+        main {
+            border: 2px solid blue;
+            width: 800px;
+            height: 500px;
+            display: flex;
+        }
+        main .main-left {
+            border: 2px dashed salmon;
+            width: 270px;
+            
+        }
+        main .main-center {
+            border: 2px dashed mediumseagreen;
+            width: 270px;
+        }
+        footer {
+            border: 2px solid seagreen;
+            width: 800px;
+            height: 100px;
+            text-align: center;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>레이아웃 나누기 연습</h1>
+    <header>
+        <div class="left">왼</div>
+        <div class="right">오</div>
+    </header>
+    <main>
+        <div class="main-left">메인 왼쪽</div>
+        <div class="main-center">메인 중앙</div>
+        <div class="main-right">메인 오른쪽</div>
+    </main>
+    <footer>푸터</footer>
+</body>
+</html>

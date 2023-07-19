@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .result {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>hashtag 추가 연습</h1>
+    <hr>
+
+    <div class="result"></div>
+    <div class="input">
+        <input type="text" name="input" placeholder="태그 추가">
+    </div>
+
+    <script>
+        // 입력할 값
+        const input = document.querySelector('input[name="input"]')
+        // 결과 값
+        const result = document.querySelector('div.result')
+
+        const keyHandler = function(event) {
+            if(event.key == 'Enter') {
+                const value = event.target.value
+                const link = document.createElement('a')
+                link.href = '#'
+                link.title = '#' + value
+                link.innerText = '#' + value
+                if(result.innerHTML != '') {
+                    result.innerHTML += ', '
+                }
+                result.appendChild(link)
+                event.target.value = ''
+                
+            }
+        }
+        input.onkeypress = keyHandler
+    </script>
+
+    
+</body>
+</html>

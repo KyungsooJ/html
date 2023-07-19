@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02.html</title>
+    <style>
+        #slider {   /* 창문의 크기 */
+            border: 2px solid black;
+            width: 400px;
+            overflow: hidden;   /* scroll, visible */
+            margin: auto;
+
+        }
+        .wrap {     /* 실제 화면 요소의 배치 */
+            display: flex;
+            width: 2000px;
+            height: 240px;
+            position: relative;
+        }
+        .item {
+            transition-duration: 1s;
+            position: absolute;
+            flex: 1;
+            width: 400px;
+            height: 240px;         /* 영역의 높이와 한 줄의 높이를 맞추면*/
+            line-height: 240px;    /* 글자가 상하 가운데로 배치된다 */
+            text-align: center;
+            font-size: 40px;
+            box-sizing: border-box;
+        }
+        .item:nth-child(5n + 1) { background-color: lightpink; } /* 5n + 1 은 5로 나누었을 때 나머지가 1이다 라는 뜻*/
+        .item:nth-child(5n + 2) { background-color: lightgoldenrodyellow; }
+        .item:nth-child(5n + 3) { background-color: lightgreen }
+        .item:nth-child(5n + 4) { background-color: lightskyblue; }
+        .item:nth-child(5n + 0) { background-color: plum; }
+    </style>
+</head>
+<body>
+
+    <h1>화면 요소를 스크립트에서 불러서 사용하기</h1>
+    <hr>
+
+    <div id="slider">
+        <div class="wrap">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+        </div>
+    </div>
+
+    <script>
+        // nodeList : HTML문서 요소의 연속된 구조 (배열은 아님)
+        // forEach는 사용가능하지만, 이외의 배열 함수는 사용할 수 없다
+        const itemList = document.querySelectorAll('.item')
+        const itemArray = Array.from(itemList)
+
+        const wrap = document.querySelector('.wrap')
+
+        function sliderHandler() {
+            itemArray[0].style.opacity = 0
+            itemArray[0].style.left = '-800px'
+            itemArray[1].style.left = '-400px'
+            itemArray[2].style.left = '0px'
+            itemArray[3].style.left = '400px'
+            itemArray[4].style.left = '800px'
+            itemArray[3].style.opacity = 1
+
+
+            itemArray.push(itemArray.shift())
+        }
+        
+        setInterval(sliderHandler, 1000)
+
+    </script>
+    
+</body>
+</html>

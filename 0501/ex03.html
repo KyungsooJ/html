@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03.html</title>
+    <style>
+        #slider {
+            cursor: pointer;
+            overflow: hidden;
+            width: 400px;
+            margin: auto;
+            border: 3px solid red;
+        }
+        .wrap {
+            display: flex;
+            position: relative;
+            height: 240px;
+        }
+
+        .item {
+            position: absolute;
+            transition-duration: 1s;
+            box-sizing: border-box;
+            width: 400px;
+            height: 240px;
+            background-position: center;
+            background-size: auto 120%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>carousel</h1>
+    <hr>
+
+    <div id="slider">
+        <div class="wrap"></div>
+            
+    </div>
+
+    <script>
+        const imgArr = []
+        for(let i = 1; i <= 9; i++) {
+            imgArr.push(`img/${i}.jpg`)
+        }
+        console.log(imgArr)
+
+        const wrap = document.querySelector('.wrap')
+        imgArr.forEach(img => {
+            const item = document.createElement('div')
+            item.classList.add('item')
+            item.style.backgroundImage = `url('${img}')`
+            wrap.appendChild(item)
+        })
+
+        function makeWidthArray(size, length) {
+            // length 값이 홀수인 경우, 짝수로 바꿔주기 위해 if 문사용
+            if(length %2 != 0) {
+                length -= 1
+            }
+            console.log(size, length)
+            const num = size * length / 2
+            const arr = []
+            for (let i = -num; i <= num; i+= size) {
+                arr.push(i + 'px')
+            }
+            return arr
+        }
+
+        const unitSize = 400
+        const itemList = document.querySelectorAll('.item')
+        const itemArray = Array.from(itemList)
+        wrap.style.width = unitSize * itemArray.length + 'px' /* unitSize(400) * itemArray.length(9) = 3600px */
+        
+        // const sample = [-1600, -1200, -800, -400, 0, 400, 800, 1200, 1600]
+        const result = makeWidthArray(unitSize, itemArray.length)
+        console.log(result)
+
+        function handler() {
+            itemArray.forEach((element, index) => element.style.left = result[index])
+            itemArray[0].style.opacity = 0
+            itemArray[itemArray.length - 2].style.opacity = 1
+            itemArray.push(itemArray.shift())
+        }
+
+        handler()
+        let interval = setInterval(handler, 2000)
+        slider.onmouseover = () => {
+            clearInterval(interval)
+            slider.style.border = '3px solid black'
+        }    
+        slider.onmouseout = () => {
+            interval = setInterval(handler, 2000)
+            slider.style.border = '3px solid red'
+        }    
+    </script>
+    
+</body>
+</html>

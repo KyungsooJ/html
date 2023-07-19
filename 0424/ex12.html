@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <title>quiz2.html</title>
+    <style>
+      .nav > ul {
+        width: 1020px;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding-left: 0px;
+        margin: auto;
+        border-top: 3px solid #00b2cf;
+      }
+      ul > li {
+        border-left: 1px solid;
+        position: relative;
+        padding: 10px;
+      }
+      li {
+        box-sizing: border-box;
+        width: 145px;
+        height: 40px;
+        text-align: center;
+        background-color: #061c25;
+        color: white;
+      }
+      ul > li:hover {
+        color: #00b2cf;
+        border-bottom: 3px solid #00b2cf;
+        cursor: pointer;
+      }
+
+      ol {
+        display: none;
+      }
+
+      ol > li {
+        list-style: none;
+        padding-left: 0px;
+        font-size: 13px;
+        width: 180px;
+        text-align: left;
+        padding: 5px 10px;
+        border-bottom: 1px solid white;
+        background-color: #115773;
+      }
+      ul > li:hover > ol {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: -42px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <p><img src="../img/인벤.png" alt="" /></p>
+      <ul>
+        <li><span>홈</span></li>
+        <li>
+          <span>기록실</span>
+          <ol>
+            <li>LOL 기록실 - 경기기록</li>
+            <li>LOL 기록실 - 선수기록</li>
+            <li>LOL 기록실 - 팀 통산</li>
+            <li>LOL 기록실 - 선수 통산</li>
+            <li>LOL 기록실 - 챔피언 픽/밴</li>
+            <li>LOL 기록실 - 래더 랭킹</li>
+            <li>LOL 프로팀 정보</li>
+          </ol>
+        </li>
+        <li><span>LCK 인벤</span></li>
+        <li>
+          <span>챔피언</span>
+          <ol>
+            <li>LOL 챔피언 정보</li>
+            <li>챔피언 능력치 랭킹</li>
+            <li>실시간 챔피언 평가</li>
+          </ol>
+        </li>
+        <li><span>카운터 픽</span></li>
+        <li><span>공략</span></li>
+        <li><span>스킨갤러리</span></li>
+        <li><span>방송/영상</span></li>
+        <li>
+          <span>LoL DB</span>
+          <ol>
+            <li>시즌13 룬 시뮬</li>
+            <li>시즌13 아이템 DB</li>
+            <li>소환사 주문 DB</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    
+</body>
+</html>

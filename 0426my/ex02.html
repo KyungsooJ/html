@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02.html</title>
+    <style>
+        body > div {
+            margin: 10px; /* 사진들 조금 떨어뜨림 */
+        }
+        .test1{
+            background-image: url('img/사진.jpg');
+            background-size: auto 100%;
+            background-repeat: no-repeat; /*안하면 사진 반복됨 */
+            background-position: center;
+            /* border: 2px dashed red; */
+            width: 250px;
+            height: 200px;
+            transition-duration: 0.5s; /* 확대 축소 할때 천천히 */
+
+        }
+        .test1:hover {
+            background-size: auto 150%;
+            transition-duration: 0.5s;
+        }
+        .test2{
+            overflow: hidden;
+            width: 250px;
+            height: 200px;
+
+        }
+        .test2 > img {
+            transform: translateY(-10%);
+            transition-duration: 0.5s;
+        }
+
+        .test2:hover > img {
+            transform: scale(130%);
+        }
+        .test3 > img {
+            transition-duration: 2s;
+        }
+
+        .test3 {
+            overflow: hidden;
+            width: 250px;
+            height: 200px;
+        }
+        .test3:hover > img {
+            transform: rotate(20deg)
+        }
+        .test4 {
+            width: 250px;
+            height: 200px;
+        }
+        .test4 > img {
+            transition-duration: 1s;
+            position: relative;
+            left: 0;
+        }
+        .test4:hover > img {
+            left: -400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>마우스 오버 transform</h1>
+    <hr>
+
+    <div class="test1"></div>
+
+    <div class="test2">
+        <img src="img/사진2.jpg" width="250">
+    </div>
+
+    <div class="test3">
+        <img src="img/아줌마.jpg" width="250">
+    </div>
+
+    <div class="test4">
+        <img src="img/정우성.jpg" width="250">
+    </div>
+
+
+    
+</body>
+</html>

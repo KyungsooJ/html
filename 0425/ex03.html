@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03.html</title>
+    <style>
+        fieldset {
+            width: 300px;
+            height: 200px;
+            /* overflow: auto; 영역의 범위를 넘어가면 스크롤로 처리 */
+            /* overflow: scroll; 높이가 넉넉해도 스크롤바 표시 */
+            /* overflow: visible; 디폴트 */
+            overflow-x: hidden;
+            overflow-y: hidden;
+            position: relative;
+            transition-duration: 0.5s;
+        }
+
+        /* fieldset:hover { */
+            /* overflow-x: hidden; */
+            /* overflow-y: scroll; */
+        /* } */
+
+        .more {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, white);
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ex03.html</h1>
+    <hr>
+
+    <fieldset>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque tempora, minima ullam debitis nisi aliquid cumque quidem necessitatibus iste nemo reiciendis, sequi blanditiis et sint, natus quis alias eius.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque tempora, minima ullam debitis nisi aliquid cumque quidem necessitatibus iste nemo reiciendis, sequi blanditiis et sint, natus quis alias eius.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque tempora, minima ullam debitis nisi aliquid cumque quidem necessitatibus iste nemo reiciendis, sequi blanditiis et sint, natus quis alias eius.
+        <div class="more">더 보고 싶으면 클릭</div>
+    </fieldset>
+
+    <script>
+        // css 선택자를 이용하여 문서 요소를 불러와서 변수에 저장한다
+        const more = document.querySelector('.more') //클래스가 more인 요소 하나를 불러온다
+        const fieldset = document.querySelector('fieldset')
+
+        more.onclick = function() {
+            more.style.display = 'none'
+            fieldset.style.height = '400px'
+        }
+
+    </script>
+    
+</body>
+</html>

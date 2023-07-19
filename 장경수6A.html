@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장경수 6A</title>
+    <style>
+
+        header {
+            margin: 0 auto;
+            width: 1100px;
+            border: 2px solid blue;
+            background-color: #f1c40f;
+            box-sizing: border-box;
+        }
+        .top {
+            border: 2px solid rgb(241, 196, 15);
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        .top ul {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .top .top-left {
+            padding-top: 15px;
+            padding-left: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .top .top-left ul {
+            list-style: none;
+        }
+        .top-right ul {
+        display: flex;
+        list-style: none;
+        }
+        .top-right ul li {
+            margin-right: 15px;
+        }
+        .top-mid {
+            display: flex;
+            border: 2px solid red;
+            height: 80px;
+            margin-bottom: auto;
+            padding-left: 20px;
+            align-items: center; 
+        }
+        .search {
+            padding-left: 30px;
+        }
+        .search input[type="search"] {
+        border: 2px solid green;
+        border-radius: 20px; /* 테두리를 둥글게 만듦 */
+        height: 40px;
+        width: 250px;
+        padding-left: 10px;
+        font-size: 16px;
+        }
+        .top-bottom {
+        border: 2px solid indianred;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0;
+        font-weight: bold;   
+        }
+        .Tbottom-left {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        }
+        .Tbottom-left ul {
+        list-style: none;
+        display: flex;
+        padding-inline-start: 0;
+        padding-left: 20px;
+        }
+        .Tbottom-left ul li {
+        margin-right: 10px;
+        }
+        .Tbottom-right {
+            padding-right: 20px;
+            cursor: pointer;
+        }
+        .Tbottom-right ul {
+        list-style: none;
+        }
+        .logo {
+            font-size: 30px;
+        }
+        main {
+            display: flex;
+            border: 2px solid black;
+            width: 1100px;
+            margin: 0 auto;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+        main div {       
+            font-size: 30px;
+            text-align: center;      
+        }
+        .mid-left-top {
+            border: 2px dashed aqua;
+            width: 650px;
+            height: 304px;
+            background-color: #1abc9c;
+            line-height: 285px;     
+        }
+        .mid-left-bottom {
+            border: 2px dashed coral;
+            width: 650px;
+            height: 305px;
+            background-color: #bf8a62;
+            margin-top: 5px;
+            line-height: 295px;
+        }
+        .mid-right-top {
+            border: 2px dashed royalblue;
+            width: 435px;
+            height: 150px;
+            background-color: #f47272;
+            margin-left: 5px;
+            line-height: 145px;
+        }
+        .mid-right-mid {
+            border: 2px dashed hotpink;
+            width: 435px;
+            height: 150px;
+            background-color: #6589d3;
+            margin-left: 5px;
+            margin-top: 5px;
+            line-height: 145px;
+        }
+        .mid-right-bottom {
+            border: 2px dashed mediumslateblue;
+            width: 435px;
+            height: 300px;
+            background-color: #e0e0e0;
+            margin-left: 5px;
+            margin-top: 5px;
+            line-height: 270px;
+        } 
+        footer {
+            border: 2px solid tomato;
+            width: 1100px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            background-color: #e0e0e0;
+            text-align: center;
+            font-weight: bold;
+        }
+        footer .f1 {
+            border: 2px dashed seagreen;
+            margin-top: 2px;
+        }
+        footer .f2 {
+            border: 2px dashed gold;
+            margin-top: 2px;
+        }
+        footer .f3 {
+            border: 2px dashed mediumspringgreen;
+            margin-top: 2px;
+        }
+
+	</style>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="top-left">
+                <span>멜론 티켓</span>
+                
+                
+            </div>
+            <div class="top-right">
+                <ul>
+                    <li>이용권 구매</li>
+                    <li>멜론 라운지</li>
+                    <li>이벤트</li>
+                    <li>공지사항</li>
+                </ul>
+            </div>
+        </div>
+       
+
+        <div class="top-mid">
+            <div class="logo">Melon</div>
+            <div class="search"><input type="search" placeholder="검색"></div>
+        </div>
+
+        <div class="top-bottom">
+            <div class="Tbottom-left">
+                <ul>
+                    <li>멜론차트</li>
+                    <li>최신음악</li>
+                    <li>장르음악</li>
+                    <li>멜론DJ</li>
+                    <li>멜론TV</li>
+                    <li>스타포스트</li>
+                    <li>매거진</li>
+                    <li>뮤직어워드</li>
+                    <li>어학</li>
+                </ul>
+            </div>
+            <div class="Tbottom-right">
+                <ul>
+                    <li>마이뮤직</li>
+                </ul>
+            </div> 
+        </div>
+	</header>
+
+    <main>
+        <div class="mid-left">
+            <div class="mid-left-top">최신 앨범</div>
+            <div class="mid-left-bottom">인기 있어요</div>
+        </div>
+
+        <div class="mid-right">
+            <div class="mid-right-top">로그인</div>
+            <div class="mid-right-mid">광고</div>
+            <div class="mid-right-bottom">멜론 차트 순위</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="f1">고객센터</div>
+        <div class="f2">이용 약관</div>
+        <div class="f3">회사 정보</div>
+    </footer>
+
+
+</body>
+</html>

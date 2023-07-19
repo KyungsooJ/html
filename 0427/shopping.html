@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 헤더 스타일 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 120px;
+  height: 40px;
+}
+
+.search-form input[type="text"] {
+  width: 200px;
+  height: 30px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-form button[type="submit"] {
+  width: 50px;
+  height: 30px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+/* 메인 스타일 */
+main {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.new-items, .popular-items {
+  margin: 30px 0;
+}
+
+.new-items h2, .popular-items h2 {
+  margin-bottom: 20px;
+}
+
+.new-items li, .popular-items li {
+  display: inline-block;
+  width: 200px;
+  margin-right: 20px;
+  background-color: #fff;
+ 
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+.new-items img, .popular-items img {
+width: 150px;
+height: 150px;
+margin: 20px;
+}
+
+.new-items h3, .popular-items h3 {
+margin-bottom: 10px;
+}
+
+.new-items p, .popular-items p {
+font-weight: bold;
+color: #333;
+}
+
+/* 푸터 스타일 */
+footer {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+background-color: #333;
+color: #fff;
+font-size: 14px;
+}
+
+footer nav ul {
+margin-bottom: 10px;
+}
+
+footer nav li {
+margin: 0 10px;
+}
+
+.social-icons a {
+margin-right: 10px;
+}
+
+.social-icons img {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="logo.png" alt="로고">
+    </div>
+    <form class="search-form">
+      <input type="text" placeholder="검색어를 입력하세요">
+      <button type="submit">검색</button>
+    </form>
+    <nav>
+      <ul>
+        <li><a href="#">여성의류</a></li>
+        <li><a href="#">남성의류</a></li>
+        <li><a href="#">신발/가방</a></li>
+        <li><a href="#">악세사리</a></li>
+        <li><a href="#">전자제품</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">
+      <img src="banner.png" alt="메인 배너">
+    </section>
+    <section class="new-items">
+      <h2>신상품</h2>
+      <ul>
+        <li>
+          <img src="item1.png" alt="상품 이미지">
+          <h3>상품 이름</h3>
+          <p>상품 가격</p>
+        </li>
+        <li>
+          <img src="item2.png" alt="상품 이미지">
+          <h3>상품 이름</h3>
+          <p>상품 가격</p>
+        </li>
+        <li>
+          <img src="item3.png" alt="상품 이미지">
+          <h3>상품 이름</h3>
+          <p>상품 가격</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="popular-items">
+      <h2>인기상품</h2>
+      <ul>
+        <li>
+          <img src="item4.png" alt="상품 이미지">
+          <h3>상품 이름</h3>
+
+          <p>상품 가격</p>
+    </li>
+    <li>
+      <img src="item5.png" alt="상품 이미지">
+      <h3>상품 이름</h3>
+      <p>상품 가격</p>
+    </li>
+    <li>
+      <img src="item6.png" alt="상품 이미지">
+      <h3>상품 이름</h3>
+      <p>상품 가격</p>
+    </li>
+  </ul>
+</section>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">회사 소개</a></li>
+        <li><a href="#">이용 약관</a></li>
+        <li><a href="#">개인 정보 처리 방침</a></li>
+        <li><a href="#">고객 센터</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons">
+      <a href="#"><img src="facebook.png" alt="페이스북"></a>
+      <a href="#"><img src="twitter.png" alt="트위터"></a>
+      <a href="#"><img src="instagram.png" alt="인스타그램"></a>
+    </div>
+    <p>&copy; 2023 온라인 쇼핑몰. All rights reserved.</p>
+  </footer>
+
+
+
+
+    
+</body>
+</html>

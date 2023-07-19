@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1</title>
+    <style>
+        .header {
+            border: 2px solid red;
+            text-align: right;
+            padding: 20px;
+            padding-bottom: 20px;
+            
+
+        }
+
+        .main {
+            border: 2px solid blue;            
+            padding: 20px;
+            margin: auto;
+   
+        }
+
+        .nav {
+            
+            border: 5px solid purple;
+            text-align: center;
+            margin: auto;
+                       
+        }
+
+        .main > .nav > .logo {
+            border: 2px solid blue;   
+            color: green;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: 'courier New', Courier, monospace;
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            
+
+        }
+
+        .main > .nav > .login ul {
+            border: 4px solid salmon;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 30px;
+            padding: 0;
+        }
+
+        .main > .nav > .login ul li {
+            list-style: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        .main > .nav > .login ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .main > .nav > .findAcc ul {
+            display: flex;
+            justify-content: space-evenly;
+
+            margin: 20pt;
+        }
+
+        .main > .nav > .findAcc ul li {
+            list-style: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        .main > .nav > .findAcc ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+
+        .idpw input[type="text"],
+        .idpw input[type="password"] {
+            
+            
+            width: 50%;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 14px;
+            
+        }
+
+        .loginButton {
+            
+        }
+
+        
+
+        
+        
+        .banner > img {
+            width: 100%;
+        }
+        .footer > ul {
+            border: 4px solid salmon;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            font-size: 10px;
+        }
+
+        .nav > footer {
+            text-align: center;
+            font-size: 13px;
+            
+            
+        }
+
+
+
+
+        
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <select>
+            <option 한국어></option>
+            <option English></option>
+            <option 中文(简体)></option>
+            <option 中文(台灣)></option>
+        </select>
+    </div>
+
+    <div class="main">
+        <div class="nav">
+            <div class="logo">NAVER</div>
+        <div class="login">
+            <ul>
+                <li><a href="#">ID 로그인</a></li>
+                <li><a href="#">일회용 번호</a></li>
+                <li><a href="#">qr 코드</a></li>
+            </ul>
+              </div>
+
+        <div class="idpw">
+            <input type="text" placeholder="아이디"><br>
+        
+        
+            <input type="password" placeholder="비밀번호">  
+        </div>
+
+        <div class="checkbox">
+            <label><input type="checkbox" name="logincondition">로그인 상태 유지</label>
+            <input type="range" name="security" min="0" max="100">
+            <span class="rangeValue">ip보안</span>
+        </div>
+
+        <div class="loginButton">
+
+            <button>로그인</button>
+
+        </div>
+
+        <div class="findAcc">
+            <ul>
+                <li><a href="#">비밀번호 찾기</a></li>
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+
+        <div class="banner">
+            <img src="banner.JPG">
+        </div>
+        
+        <div class="footer">
+            <ul>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>책임의 한계와 법적고지</li>
+                <li>회원정보 고객센터</li><br><br>
+                <li>NAVER Copyright © NAVER Corp. All Rights Reserved.</li>
+                
+            </ul>
+        </div>
+
+
+            
+
+           
+
+
+        </div>
+    </div>
+    
+</body>
+</html>

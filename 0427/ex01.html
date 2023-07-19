@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01.html</title>
+    <style>
+        input[type="text"] {
+            all: unset;
+            padding: 10px;
+            font-size: 20px;
+            border-bottom: 2px solid black;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <h1>ex01.html (javascrpit)</h1>
+    <hr>
+
+    <input type="text" placeholder="입력" autofocus>
+    <input type="password">
+    <input type="button" value="버튼1">
+    <button>버튼2</button>
+
+    <pre class="text"></pre>
+
+    <script>
+        // HTML 문서에서 특정 요소 (element)를 불러오기 위해서 css 선택자를 사용한다
+        
+        // document.getElementById(id)          : id를 지정하여 단일 요소를 불러온다
+        // document.querySelector(selector)     : css 선택자를 지정하여 단일 요소를 불러온다
+        // document.querySelectorAll(selector)  : 선택자에 맞는 모든 요소를 불러온다
+
+        // var, let, const
+        const input1 = document.querySelector('input[type="text"]')
+        const input2 = document.querySelector('input') /* 그냥 input이라고 적으면 input중에 제일 처음꺼 불러온다*/
+        const input3 = document.querySelector('input[type="password"]')
+        const input4 = document.querySelector('input[type="button"]')
+        const inputList = document.querySelectorAll('input') /* input들을 담아서 리스트에 담는다 */
+
+        const pre = document.querySelector('pre.text')
+
+        // alert(input1 == input2)
+
+        // 스타일 지정방법
+        pre.style.backgroundColor = 'skyblue'
+        pre.style.padding = '20px'
+        pre.style.fontSize = '20px'
+        // 텍스트 넣는 방법
+        pre.innerText = '안녕하세요\n'
+        pre.innerText += '자바 스크립트를 이용하여 작성한 내용입니다\n'
+        pre.innerText += 'input1 == inputList[0] : ' + (input1 == inputList[0]) + '\n'
+        pre.innerText += 'input3 == inputList[1] : ' + (input3 == inputList[1]) + '\n'
+        pre.innerText += 'input4 == inputList[2] : ' + (input4 == inputList[2]) + '\n'
+
+        // let으로 하면 
+        for(let i =0; i < inputList.length; i++) {
+            const target = inputList[i]
+            target.value = 'Hello ' + i + ' !!'
+        }
+
+    </script>
+</body>
+</html>

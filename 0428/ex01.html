@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01.html</title>
+</head>
+<body>
+
+    <script>
+        // body 태그는 document.body 로 접근 가능하다
+        
+        //  HTMLelement (객체) 를 생성하려면
+        //  document.createElement(tagName)
+
+        // A요소 하위에 B태그 객체를 자식 요소로 추가하려면     
+        // A.appendChild(B)
+
+        const h1 = document.createElement('h1') // new HTMLElement(tagName)
+        h1.innerText = 'ex01.html'
+
+        const hr = document.createElement('hr')
+
+        // 없으면 출력되지 않는다
+        document.body.appendChild(h1)
+        document.body.appendChild(hr)
+
+        const img = document.createElement('img')
+        img.src = 'img/danbi.jpg'   // <img src="img/danbi.jpg">
+        img.height = 100            // <img height="100">
+
+        document.body.appendChild(img) // body태그 안쪽에 추가한다
+    </script>
+    
+</body>
+</html>
